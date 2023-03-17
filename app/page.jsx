@@ -10,7 +10,7 @@ export default async function Home() {
   console.log("res", res);
   return (
     <main>
-      <h2 className="text-2xl mb-5 text-white text-center">Trending Today</h2>
+      <h2 className="text-2xl mb-5 text-white text-center">Trending Today!</h2>
       <div className="grid grid-cols-3 fluid gap-16">
         {res.results.map((person) => (
           <Person
