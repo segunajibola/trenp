@@ -22,7 +22,7 @@ const Footer = () => (
             TRENP
           </h4>
           <p className="font-normal text-[18px] text-white">
-            Made with ❤, <a href="https://www.nextjs.org">Nextjs</a>  and <a href="https://tailwindcss.com">TailwindCSS</a> by Segun Ajibola.
+            Made with ❤, <a href="https://www.nextjs.org" className='underline'>Nextjs</a>  and <a href="https://tailwindcss.com" className='underline'>TailwindCSS</a> by  <a href="https://www.segunajibola.com" className='underline'>Segun Ajibola.</a>
           </p>
           <p className="font-normal text-[14px] text-white opacity-50">
             Copyright © {new Date().getFullYear()} Trenp. All rights reserved.
