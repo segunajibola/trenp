@@ -6,7 +6,7 @@ import Person from "../components/Person";
 export default function Home() {
   //  const data = await fetch(
   //    `https://api.themoviedb.org/3/trending/person/day?api_key=${process.env.API_KEY}`
-  //  );
+  //   );
   //  const res = await data.json();
   // put async in function name remove "use client"
   // console.log("api", process.env.API_KEY)
