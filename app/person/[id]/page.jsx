@@ -4,7 +4,7 @@ export async function generateStaticParams() {
   const data = await fetch(
     `https://api.themoviedb.org/3/trending/person/day?api_key=${process.env.NEXT_PUBLIC_API_KEY}`
   );
-  
+
   const res = await data.json();
 
   return res.results.map((person) => ({
@@ -24,18 +24,23 @@ export default async function MovieDetail({ params }) {
     <div>
       <div className="">
         <div className="flex justify-between my-5">
-          <h2 className="text-4xl">{res.birthday}</h2>
-          <h1 className="text-lg ">{res.deathday}</h1>
+          <h2 className="text-lg">Born: {res.birthday}</h2>
+          <h1 className="text-lg ">{res.deathday ? `Died: ${res.deathday}` : ""}</h1>
         </div>
-        <Image
-          src={imagePath + res.profile_path}
-          className="rounded-md"
-          width={400}
-          height={400}
-          alt={res.name}
-          priority
-        />
-        <h1 className="text-lg my-2">{res.biography}</h1>
+        <div className="flex justify-between gap-3">
+          <Image
+            src={imagePath + res.profile_path}
+            className="rounded-md"
+            width={400}
+            height={400}
+            alt={res.name}
+            priority
+          />
+          <div>
+            <h1 className="text-2xl">Biography</h1>
+            <h1 className="text-lg my-2">{res.biography}</h1>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -10,9 +10,8 @@ const Navbar = () => (
     variants={navVariants}
     initial="hidden"
     whileInView="show"
-    className={`${styles.xPaddings} py-8 relative`}
+    className={`${styles.xPaddings} py-4 md:py-8 relative`}
   >
-    <div className="absolute w-[50%] inset-0 gradient-01" />
     <div className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}>
       <Link href="/" className="text-3xl mb-5 text-white text-center leading-[30.24px]">
         TRENP
