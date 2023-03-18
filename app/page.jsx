@@ -28,7 +28,7 @@ export default function Home() {
       <h2 className="text-3xl my-8 text-white text-center leading-[30.24px]">
         Trending Today In The Movie Industry!
       </h2>
-      <p className="text-center text-sm">Click to see details.</p>
+      <p className="text-center text-sm mb-2">Click to see details.</p>
       <div className="grid grid-cols-2 md:grid-cols-3 fluid gap-4 md:gap-8">
         {data.map((person) =>
           person.profile_path ? (
