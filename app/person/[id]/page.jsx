@@ -42,7 +42,7 @@ export default async function MovieDetail({ params }) {
             <h1 className="text-lg my-2">{res.biography}</h1>
           </div>
         </div>
-        <Link href="/">Go back</Link>
+        <Link href="/" className="flex justify-center mt-10 underline">Go back</Link>
       </div>
     </div>
   );
