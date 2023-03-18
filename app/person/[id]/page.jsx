@@ -37,7 +37,7 @@ export default async function MovieDetail({ params }) {
             alt={res.name}
             priority
           />
-          <div>
+          <div className="my-5 md:my-0">
             <h1 className="text-2xl">Biography</h1>
             <h1 className="text-lg my-2">{res.biography}</h1>
           </div>
