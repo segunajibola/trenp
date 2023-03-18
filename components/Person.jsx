@@ -20,10 +20,10 @@ export default function Person({
           alt={name}
           priority
         />
-        <h2 className="text-xl my-3 text-center">Name: {name}</h2>
-        <div className="px-2 text-lg">
+        <div className="px-2 text-lg text-center my-5 space-y-3">
+          <h1 className="text-xl">Name: {name}</h1>
           <h2 className="">Known for: {known_for_department}</h2>
-          <h1 className="">Popularity: {popularity}</h1>
+          <h2 className="">Popularity: {popularity}</h2>
         </div>
       </Link>
     </div>
