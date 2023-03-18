@@ -21,7 +21,7 @@ export default function Person({
           priority
         />
         <h2 className="text-xl my-3 text-center">Name: {name}</h2>
-        <div className="flex justify-between gap-2 px-2 text-lg">
+        <div className="px-2 text-lg">
           <h2 className="">Known for: {known_for_department}</h2>
           <h1 className="">Popularity: {popularity}</h1>
         </div>
