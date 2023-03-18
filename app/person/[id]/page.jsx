@@ -27,7 +27,7 @@ export default async function MovieDetail({ params }) {
           <h2 className="text-lg">Born: {res.birthday}</h2>
           <h1 className="text-lg ">{res.deathday ? `Died: ${res.deathday}` : ""}</h1>
         </div>
-        <div className="flex justify-between gap-3">
+        <div className="md:flex justify-between gap-3">
           <Image
             src={imagePath + res.profile_path}
             className="rounded-md"
