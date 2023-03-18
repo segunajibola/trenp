@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   const data = await fetch(
@@ -41,6 +42,7 @@ export default async function MovieDetail({ params }) {
             <h1 className="text-lg my-2">{res.biography}</h1>
           </div>
         </div>
+        <Link href="/">Go back</Link>
       </div>
     </div>
   );
