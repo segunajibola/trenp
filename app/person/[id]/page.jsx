@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export async function generateStaticParams() {
   const data = await fetch(
-    `https://api.themoviedb.org/3/trending/person/day?api_key=${process.env.API_KEY}`
+    `https://api.themoviedb.org/3/trending/person/day?api_key=${process.env.NEXT_PUBLIC_API_KEY}`
   );
   
   const res = await data.json();
@@ -16,7 +16,7 @@ export default async function MovieDetail({ params }) {
   const { id } = params;
   const imagePath = "https://image.tmdb.org/t/p/original";
   const data = await fetch(
-    `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.API_KEY}`
+    `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.NEXT_PUBLIC_API_KEY}`
   );
   const res = await data.json();
 
@@ -35,7 +35,7 @@ export default async function MovieDetail({ params }) {
           alt={res.name}
           priority
         />
-        <h1 className="text-lg">{res.biography}</h1>
+        <h1 className="text-lg my-2">{res.biography}</h1>
       </div>
     </div>
   );

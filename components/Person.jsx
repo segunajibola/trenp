@@ -10,20 +10,20 @@ export default function Person({
 }) {
   const imagePath = "https://image.tmdb.org/t/p/original";
   return (
-    <div>
-      <Link href={`/person/${id}`} className="bg-gray-600 rounded-lg">
+    <div className="bg-gray-800 rounded-lg pb-3">
+      <Link href={`/person/${id}`}>
         <Image
           src={imagePath + profile_path}
-          className="rounded-lg"
+          className="rounded-b-[30px]"
           width={800}
           height={800}
           alt={name}
           priority
         />
-        <div className="flex flex-col gap-2">
-        <h2 className="text-xl">Name: {name}</h2>
-        <h2 className="text-lg">Known for: {known_for_department}</h2>
-        <h1 className="text-md">Popularity: {popularity}</h1>
+        <h2 className="text-xl my-3 text-center">Name: {name}</h2>
+        <div className="flex justify-between gap-2 px-2 text-lg">
+          <h2 className="">Known for: {known_for_department}</h2>
+          <h1 className="">Popularity: {popularity}</h1>
         </div>
       </Link>
     </div>
